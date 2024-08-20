@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { openSans } from "@/app/ui/fonts";
+import Navbar from "@/components/navbar/navbar";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lukas Stuart Fry's Personal Website",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} antialiased`}>{children}</body>
+      <body
+        className={`${openSans.className} container m-auto min-h-screen bg-gray-100 p-12 antialiased`}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
