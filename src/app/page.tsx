@@ -31,6 +31,39 @@ export default function Home() {
           alt="lukas profile photo"
         />
       </div>
+
+      {/* About Me */}
+      <section>
+        <div className="mt-40 flex flex-col">
+          <Subheader className="font-semibold underline">About Me</Subheader>
+          <div className="flex flex-col gap-6 text-lg leading-7">
+            <div className="mt-6">
+              I&apos;m a Software Engineer with 7+ years of experience. I have a
+              passion for building high-quality, user-friendly applications. I
+              have a strong background in frontend development, with expertise
+              in TypeScript, React, and Redux. I am always looking to learn new
+              technologies and improve my skills!
+            </div>
+            <div>
+              In 2008, I received a Bachelor of Arts in Screenwriting from the
+              Loyola Marymount School of Film and Television. I worked in the
+              entertainment industry for several years, before discovering my
+              true passion for software development. In 2014, I enrolled in a
+              coding bootcamp and quickly fell in love with programming. Since
+              then, I have worked as a software engineer at several companies,
+              building web applications and honing my skills.
+            </div>
+            <div>
+              Throughout my career, I have worked on a wide range of teams, from
+              small startups to larger corporations. I particularly enjoy
+              working with product managers and product designers to collaborate
+              on the roadmap for our products, communicating with our users to
+              understand their needs, and executing features with my fellow
+              engineers.
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
