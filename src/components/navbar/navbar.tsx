@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import HomeSVG from "public/home.svg";
 import GithubSVG from "public/github.svg";
 import LinkedinSVG from "public/linkedin.svg";
+import TwitterSVG from "public/twitter.svg";
 
 export default function Navbar() {
   return (
@@ -31,6 +31,13 @@ export default function Navbar() {
           aria-describedby="linkedin link"
         >
           <LinkedinSVG width={32} height={32} />
+        </Link>
+        <Link
+          href="https://x.com/lstuartfry"
+          target="_blank"
+          aria-describedby="twitter link"
+        >
+          <TwitterSVG width={32} height={32} />
         </Link>
       </div>
     </div>
