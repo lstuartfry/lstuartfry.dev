@@ -7,8 +7,15 @@ import ReduxSVG from "public/redux.svg";
 import TypeScriptSVG from "public/typescript.svg";
 import WebGLSVG from "public/webgl.svg";
 
+import dynamic from "next/dynamic";
+
+// reference: https://stackoverflow.com/questions/72311188/hydration-failed-error-using-recharts-with-nextjs
+const BarChart = dynamic(
+  () => import("recharts").then((recharts) => recharts.BarChart),
+  { ssr: false }
+);
+
 import {
-  BarChart,
   Bar,
   LabelList,
   XAxis,
