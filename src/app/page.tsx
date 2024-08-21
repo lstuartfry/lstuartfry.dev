@@ -40,6 +40,7 @@ export default function Home() {
           </Suspense>
         </div>
       </Section>
+
       {/* Additional Skills */}
       <Section id="additionalSkills">
         <Subheader className="font-semibold underline">
@@ -128,7 +129,20 @@ export default function Home() {
             </TextLink>
           </span>
         </p>
-        <div className="mt-8 flex justify-center">placeholder</div>
+        <div className="mt-8 flex justify-center gap-8">
+          <Image
+            src="/h2-stations-map-1.png"
+            width={400}
+            height={260}
+            alt="hydrogen stations map landing page"
+          />
+          <Image
+            src="/h2-stations-map-2.png"
+            width={400}
+            height={260}
+            alt="hydrogen stations map main page"
+          />
+        </div>
         <div className="mt-8">
           <p>
             I currently live in Los Angeles, and have a lease on a hydrogen
