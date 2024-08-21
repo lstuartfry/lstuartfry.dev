@@ -10,7 +10,7 @@ import StorybookSVG from "public/storybook.svg";
 
 export default function Home() {
   return (
-    <main className="max-w-4xl m-auto mt-40 flex flex-col justify-between">
+    <main className="m-auto mt-40 flex max-w-4xl flex-col justify-between">
       <div>
         <Header>
           Hi, I&apos;m{" "}
@@ -153,8 +153,8 @@ export default function Home() {
             <TextLink href="https://h2fcp.org/stationmap" target="_blank">
               (Hydrogen Stations Map)
             </TextLink>
-            , but as a frequent user of it, there are improvements I'd like to
-            make on it. I built this application using Next.js.
+            , but as a frequent user of it, there are improvements I&apos;d like
+            to make on it. I built this application using Next.js.
           </p>
           <p>
             Check out the{" "}
