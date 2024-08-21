@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <main className="mt-40 flex flex-col justify-between">
+    <main className="max-w-4xl m-auto mt-40 flex flex-col justify-between">
       <div>
         <Header>
           Hi, I&apos;m{" "}
