@@ -1,7 +1,12 @@
+import { Suspense } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
 import { Header, Subheader } from "@/components/ui/headers";
 import Section from "@/components/ui/section";
 import SkillsChart from "@/components/skillsChart/skillsChart";
-import { Suspense } from "react";
+import TextLink from "@/components/ui/textLink";
+import StorybookSVG from "public/storybook.svg";
 
 export default function Home() {
   return (
@@ -35,6 +40,49 @@ export default function Home() {
             <SkillsChart />
           </Suspense>
         </div>
+      </Section>
+
+      {/* Additional Skills */}
+      <Section>
+        <Subheader className="font-semibold underline">
+          Additional Skills & Favorite Libraries
+        </Subheader>
+        <div className="mt-4 grid grid-cols-2 gap-y-4">
+          <div className="flex flex-col">
+            <TextLink href="https://playwright.dev/">Playwright</TextLink>
+            <span className="mt-2">
+              A powerful end-to-end testing library that allows you to write
+              tests for your web applications in a variety of browsers. This is
+              my end-to-end testing library of choice! I cannot fathom the
+              amount of days it has saved me in debugging time.
+            </span>
+          </div>
+          <div className="flex justify-center">
+            <Link href="https://playwright.dev/" target="_blank">
+              <Image
+                src="https://playwright.dev/img/playwright-logo.svg"
+                alt="playwright"
+                width={128}
+                height={128}
+              />
+            </Link>
+          </div>
+          <div className="flex flex-col">
+            <TextLink href="https://storybook.js.org/">Storybook</TextLink>
+            <span className="mt-2">
+              Storybook is a fantastic tool for building UI components in
+              isolation. Not only does it make it easy to build and iterate on
+              components in isolation, it can also be a great tool for
+              documenting your components.
+            </span>
+          </div>
+          <div className="flex justify-center">
+            <Link href="https://storybook.js.org/" target="_blank">
+              <StorybookSVG width={128} height={128} />
+            </Link>
+          </div>
+        </div>
+        {/* Tanstack-Query */}
       </Section>
 
       {/* About Me */}

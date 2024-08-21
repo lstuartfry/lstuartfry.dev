@@ -47,7 +47,7 @@ const data = [
     fill: "#764abc",
   },
   {
-    name: "NextJS",
+    name: "Next.js",
     years: 1,
     fill: "#000000",
   },
@@ -73,7 +73,7 @@ const renderCustomizedLabel = (props: any) => {
   switch (value) {
     case "JavaScript":
       return <JavaScriptSVG {...defaultProps} />;
-    case "NextJS":
+    case "Next.js":
       return <NextJSSVG {...defaultProps} />;
     case "React":
       return <ReactSVG {...defaultProps} />;
@@ -106,7 +106,7 @@ export default function SkillsChart() {
       </XAxis>
       <YAxis dataKey="name" type="category" width={150} />
       <Tooltip />
-      <Bar dataKey="years" animationDuration={2000}>
+      <Bar dataKey="years" animationDuration={1500} animationEasing="ease-out">
         <LabelList dataKey="name" content={renderCustomizedLabel} />
       </Bar>
     </BarChart>
