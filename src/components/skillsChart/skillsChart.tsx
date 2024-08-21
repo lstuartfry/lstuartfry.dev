@@ -59,7 +59,7 @@ const renderCustomizedLabel = (props: any) => {
     width: 24,
     height: 24,
     x: x + width + 10,
-    y: y + radius / 4,
+    y: y + radius / 2,
     radius: radius,
   };
 
