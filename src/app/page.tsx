@@ -32,17 +32,19 @@ export default function Home() {
             software.
           </div>
         </div>
-        <Subheader className="mt-12 flex justify-center">
-          Check out these sections below!
-        </Subheader>
-        <div className="mt-6 flex justify-around">
-          <ButtonLink href="#skills">Top Skills</ButtonLink>
-          <ButtonLink href="#additionalSkills">
-            Additional Skills / Libraries
-          </ButtonLink>
-          <ButtonLink href="#projects">Projects</ButtonLink>
-          <ButtonLink href="#aboutMe">About Me</ButtonLink>
-        </div>
+        <Card className="mt-16">
+          <Subheader className="flex justify-center">
+            Check out these sections below
+          </Subheader>
+          <div className="mt-6 flex justify-around">
+            <ButtonLink href="#skills">top skills</ButtonLink>
+            <ButtonLink href="#projects">projects</ButtonLink>
+            <ButtonLink href="#additionalSkills">
+              additional skills / libraries
+            </ButtonLink>
+            <ButtonLink href="#aboutMe">about me</ButtonLink>
+          </div>
+        </Card>
       </div>
 
       {/* Skills */}
@@ -53,6 +55,55 @@ export default function Home() {
             <Suspense>
               <SkillsChart />
             </Suspense>
+          </div>
+        </Section>
+      </Card>
+
+      {/* Projects */}
+      <Card id="projects">
+        <Section>
+          <Subheader className="font-semibold underline">Projects</Subheader>
+          <p>
+            <TextLink
+              className="text-lg"
+              href="https://h2stationsmap.dev"
+              target="_blank"
+            >
+              Hydrogen Stations Map
+            </TextLink>
+          </p>
+          <p>
+            <span>
+              In Production @{" "}
+              <TextLink href="https://h2stationsmap.dev" target="_blank">
+                https://h2stationsmap.dev
+              </TextLink>
+            </span>
+          </p>
+          <div className="mt-8">
+            <p>
+              I currently live in Los Angeles, and have a lease on a hydrogen
+              fuel-cell vehicle. The infrastructure for hydrogen fueling
+              stations is still quite lacking, and even amongst the stations
+              that exist in the Los Angeles area, they are often either out of
+              fuel, or offline altogether. A similar web application does
+              currently exist{" "}
+              <TextLink href="https://h2fcp.org/stationmap" target="_blank">
+                (Hydrogen Stations Map)
+              </TextLink>
+              , but as a frequent user of it, there are improvements I&apos;d
+              like to make on it. I built this application using Next.js.
+            </p>
+            <p>
+              Check out the{" "}
+              <TextLink
+                href="https://github.com/lstuartfry/h2-stations-map"
+                target="_blank"
+              >
+                README
+              </TextLink>{" "}
+              for more information!
+            </p>
           </div>
         </Section>
       </Card>
@@ -126,55 +177,6 @@ export default function Home() {
                 />
               </Link>
             </div>
-          </div>
-        </Section>
-      </Card>
-
-      {/* Projects */}
-      <Card id="projects">
-        <Section>
-          <Subheader className="font-semibold underline">Projects</Subheader>
-          <p>
-            <TextLink
-              className="text-lg"
-              href="https://h2stationsmap.dev"
-              target="_blank"
-            >
-              Hydrogen Stations Map
-            </TextLink>
-          </p>
-          <p>
-            <span>
-              In Production @{" "}
-              <TextLink href="https://h2stationsmap.dev" target="_blank">
-                https://h2stationsmap.dev
-              </TextLink>
-            </span>
-          </p>
-          <div className="mt-8">
-            <p>
-              I currently live in Los Angeles, and have a lease on a hydrogen
-              fuel-cell vehicle. The infrastructure for hydrogen fueling
-              stations is still quite lacking, and even amongst the stations
-              that exist in the Los Angeles area, they are often either out of
-              fuel, or offline altogether. A similar web application does
-              currently exist{" "}
-              <TextLink href="https://h2fcp.org/stationmap" target="_blank">
-                (Hydrogen Stations Map)
-              </TextLink>
-              , but as a frequent user of it, there are improvements I&apos;d
-              like to make on it. I built this application using Next.js.
-            </p>
-            <p>
-              Check out the{" "}
-              <TextLink
-                href="https://github.com/lstuartfry/h2-stations-map"
-                target="_blank"
-              >
-                README
-              </TextLink>{" "}
-              for more information!
-            </p>
           </div>
         </Section>
       </Card>
