@@ -1,21 +1,24 @@
-import { ReactNode } from "react";
+import { type HTMLAttributes } from "react";
 
-type Props = {
-  children: ReactNode;
-  className?: string;
-};
-
-export function Header({ children, className }: Props) {
+export function Header({
+  children,
+  className,
+  ...rest
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`xs:text-xl text-3xl lg:text-5xl ${className}`}>
+    <div className={`xs:text-xl text-3xl lg:text-5xl ${className}`} {...rest}>
       {children}
     </div>
   );
 }
 
-export function Subheader({ children, className }: Props) {
+export function Subheader({
+  children,
+  className,
+  ...rest
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`xs:text-lg text-xl lg:text-2xl ${className}`}>
+    <div className={`xs:text-lg text-xl lg:text-2xl ${className}`} {...rest}>
       {children}
     </div>
   );

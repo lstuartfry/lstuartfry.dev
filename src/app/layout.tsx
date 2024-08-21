@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { openSans } from "@/app/ui/fonts";
+
+import ClientListeners from "./clientListeners";
 import Navbar from "@/components/navbar/navbar";
 import "./globals.css";
 
@@ -16,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} min-h-screen bg-gray-100 antialiased pb-24`}
+        className={`${openSans.className} min-h-screen bg-gray-100 pb-24 antialiased`}
       >
         <Navbar />
+        <ClientListeners />
         {children}
       </body>
     </html>

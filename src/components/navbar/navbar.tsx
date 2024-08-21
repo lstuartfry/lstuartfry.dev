@@ -6,8 +6,8 @@ import TwitterSVG from "public/twitter.svg";
 
 export default function Navbar() {
   return (
-    <div className="top-0 sticky border-b-2 border-gray-200 p-4 bg-gray-100 z-10">
-      <div className="max-w-4xl m-auto flex justify-between">
+    <div className="sticky top-0 z-10 border-b-2 border-gray-200 bg-white p-4">
+      <div className="m-auto flex max-w-4xl justify-between">
         <div>
           <Link
             className="flex items-center gap-2"

@@ -5,7 +5,7 @@ export default function Section({
   ...rest
 }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <section className="scroll-mt-24" {...rest}>
+    <section {...rest}>
       <div className="flex flex-col">{children}</div>
     </section>
   );

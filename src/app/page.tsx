@@ -9,11 +9,12 @@ import Section from "@/components/ui/section";
 import SkillsChart from "@/components/skillsChart/skillsChart";
 import TextLink from "@/components/ui/textLink";
 import StorybookSVG from "public/storybook.svg";
+import ButtonLink from "@/components/ui/buttonLink";
 
 export default function Home() {
   return (
     <main className="xs:p-6 m-auto mt-40 flex max-w-4xl flex-col justify-between gap-12">
-      <div>
+      <div className="min-h-screen">
         <Header>
           Hi, I&apos;m{" "}
           <span className="font-semibold text-purple-500">Lukas</span>
@@ -31,11 +32,22 @@ export default function Home() {
             software.
           </div>
         </div>
+        <Subheader className="mt-12 flex justify-center">
+          Check out these sections below!
+        </Subheader>
+        <div className="mt-6 flex justify-around">
+          <ButtonLink href="#skills">Top Skills</ButtonLink>
+          <ButtonLink href="#additionalSkills">
+            Additional Skills / Libraries
+          </ButtonLink>
+          <ButtonLink href="#projects">Projects</ButtonLink>
+          <ButtonLink href="#aboutMe">About Me</ButtonLink>
+        </div>
       </div>
 
       {/* Skills */}
-      <Card>
-        <Section id="skills">
+      <Card id="skills">
+        <Section>
           <Subheader className="font-semibold underline">Top Skills</Subheader>
           <div className="mt-4">
             <Suspense>
@@ -46,8 +58,8 @@ export default function Home() {
       </Card>
 
       {/* Additional Skills */}
-      <Card>
-        <Section id="additionalSkills">
+      <Card id="additionalSkills">
+        <Section>
           <Subheader className="font-semibold underline">
             Additional Skills & Favorite Libraries
           </Subheader>
@@ -119,8 +131,8 @@ export default function Home() {
       </Card>
 
       {/* Projects */}
-      <Card>
-        <Section id="projects">
+      <Card id="projects">
+        <Section>
           <Subheader className="font-semibold underline">Projects</Subheader>
           <p>
             <TextLink
@@ -168,8 +180,8 @@ export default function Home() {
       </Card>
 
       {/* About Me */}
-      <Card>
-        <Section id="aboutMe">
+      <Card id="aboutMe">
+        <Section>
           <Subheader className="font-semibold underline">About Me</Subheader>
           <div className="flex flex-col gap-6 text-lg leading-7">
             <div className="mt-6">
