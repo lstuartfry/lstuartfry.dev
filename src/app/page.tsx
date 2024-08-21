@@ -11,6 +11,9 @@ import StorybookSVG from "public/storybook.svg";
 export default function Home() {
   return (
     <main className="max-w-4xl m-auto mt-40 flex flex-col justify-between">
+      <Link href="#skills">skills</Link>
+      <Link href="#additionalSkills">additional skills</Link>
+      <Link href="#aboutMe">about me</Link>
       <div>
         <Header>
           Hi, I&apos;m{" "}
@@ -33,17 +36,19 @@ export default function Home() {
       </div>
 
       {/* Skills */}
-      <Section>
-        <Subheader className="font-semibold underline">Top Skills</Subheader>
-        <div className="mt-4">
-          <Suspense>
-            <SkillsChart />
-          </Suspense>
-        </div>
-      </Section>
+      <div className="mt-96">
+        <Section id="skills">
+          <Subheader className="font-semibold underline">Top Skills</Subheader>
+          <div className="mt-4">
+            <Suspense>
+              <SkillsChart />
+            </Suspense>
+          </div>
+        </Section>
+      </div>
 
       {/* Additional Skills */}
-      <Section>
+      <Section id="additionalSkills">
         <Subheader className="font-semibold underline">
           Additional Skills & Favorite Libraries
         </Subheader>
@@ -86,7 +91,7 @@ export default function Home() {
       </Section>
 
       {/* About Me */}
-      <Section>
+      <Section id="aboutMe">
         <Subheader className="font-semibold underline">About Me</Subheader>
         <div className="flex flex-col gap-6 text-lg leading-7">
           <div className="mt-6">
