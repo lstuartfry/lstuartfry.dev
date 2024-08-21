@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} min-h-screen bg-gray-100 antialiased`}
+        className={`${openSans.className} min-h-screen bg-gray-100 antialiased pb-12`}
       >
         <Navbar />
         {children}
