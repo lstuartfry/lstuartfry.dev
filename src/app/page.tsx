@@ -10,7 +10,7 @@ import StorybookSVG from "public/storybook.svg";
 
 export default function Home() {
   return (
-    <main className="m-auto mt-40 flex max-w-4xl flex-col justify-between">
+    <main className="xs:p-6 m-auto mt-40 flex max-w-4xl flex-col justify-between">
       <div>
         <Header>
           Hi, I&apos;m{" "}
@@ -46,7 +46,7 @@ export default function Home() {
         <Subheader className="font-semibold underline">
           Additional Skills & Favorite Libraries
         </Subheader>
-        <div className="mt-4 grid grid-cols-2 gap-y-4">
+        <div className="mt-4 grid grid-cols-2 items-center gap-y-4">
           <div className="flex flex-col">
             <TextLink href="https://playwright.dev/" target="_blank">
               Playwright
