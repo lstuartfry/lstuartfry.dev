@@ -11,9 +11,6 @@ import StorybookSVG from "public/storybook.svg";
 export default function Home() {
   return (
     <main className="max-w-4xl m-auto mt-40 flex flex-col justify-between">
-      <Link href="#skills">skills</Link>
-      <Link href="#additionalSkills">additional skills</Link>
-      <Link href="#aboutMe">about me</Link>
       <div>
         <Header>
           Hi, I&apos;m{" "}
@@ -32,21 +29,17 @@ export default function Home() {
             software.
           </div>
         </div>
-        <div></div>
       </div>
 
       {/* Skills */}
-      <div className="mt-96">
-        <Section id="skills">
-          <Subheader className="font-semibold underline">Top Skills</Subheader>
-          <div className="mt-4">
-            <Suspense>
-              <SkillsChart />
-            </Suspense>
-          </div>
-        </Section>
-      </div>
-
+      <Section id="skills">
+        <Subheader className="font-semibold underline">Top Skills</Subheader>
+        <div className="mt-4">
+          <Suspense>
+            <SkillsChart />
+          </Suspense>
+        </div>
+      </Section>
       {/* Additional Skills */}
       <Section id="additionalSkills">
         <Subheader className="font-semibold underline">
@@ -54,7 +47,9 @@ export default function Home() {
         </Subheader>
         <div className="mt-4 grid grid-cols-2 gap-y-4">
           <div className="flex flex-col">
-            <TextLink href="https://playwright.dev/">Playwright</TextLink>
+            <TextLink href="https://playwright.dev/" target="_blank">
+              Playwright
+            </TextLink>
             <span className="mt-2">
               A powerful end-to-end testing library that allows you to write
               tests for your web applications in a variety of browsers. This is
@@ -66,14 +61,16 @@ export default function Home() {
             <Link href="https://playwright.dev/" target="_blank">
               <Image
                 src="https://playwright.dev/img/playwright-logo.svg"
-                alt="playwright"
+                alt="playwright logo"
                 width={128}
                 height={128}
               />
             </Link>
           </div>
           <div className="flex flex-col">
-            <TextLink href="https://storybook.js.org/">Storybook</TextLink>
+            <TextLink href="https://storybook.js.org/" target="_blank">
+              Storybook
+            </TextLink>
             <span className="mt-2">
               Storybook is a fantastic tool for building UI components in
               isolation. Not only does it make it easy to build and iterate on
@@ -86,8 +83,76 @@ export default function Home() {
               <StorybookSVG width={128} height={128} />
             </Link>
           </div>
+          <div className="flex flex-col">
+            <TextLink href="https://tanstack.com/query/latest" target="_blank">
+              TanStack Query
+            </TextLink>
+            <span className="mt-2">
+              An opinionated, declarative query builder and server state manager
+              for React applications. I used to spend too much time building out
+              custom hooks for fetching data in my projects. It handles caching,
+              background updates and stale data out of the box with
+              zero-configuration.
+            </span>
+          </div>
+          <div className="flex justify-center">
+            <Link href="https://tanstack.com/query/latest" target="_blank">
+              <Image
+                src="/tanstack-query.png"
+                alt="tanstack query logo"
+                width={128}
+                height={128}
+              />
+            </Link>
+          </div>
         </div>
-        {/* Tanstack-Query */}
+      </Section>
+
+      {/* Projects */}
+      <Section id="projects">
+        <Subheader className="font-semibold underline">Projects</Subheader>
+        <p>
+          <TextLink
+            className="text-lg"
+            href="https://h2stationsmap.dev"
+            target="_blank"
+          >
+            Hydrogen Stations Map
+          </TextLink>
+        </p>
+        <p>
+          <span>
+            In Production @{" "}
+            <TextLink href="https://h2stationsmap.dev" target="_blank">
+              https://h2stationsmap.dev
+            </TextLink>
+          </span>
+        </p>
+        <div className="mt-8 flex justify-center">placeholder</div>
+        <div className="mt-8">
+          <p>
+            I currently live in Los Angeles, and have a lease on a hydrogen
+            fuel-cell vehicle. The infrastructure for hydrogen fueling stations
+            is still quite lacking, and even amongst the stations that exist in
+            the Los Angeles area, they are often either out of fuel, or offline
+            altogether. A similar web application does currently exist{" "}
+            <TextLink href="https://h2fcp.org/stationmap" target="_blank">
+              (Hydrogen Stations Map)
+            </TextLink>
+            , but as a frequent user of it, there are improvements I'd like to
+            make on it. I built this application using Next.js.
+          </p>
+          <p>
+            Check out the{" "}
+            <TextLink
+              href="https://github.com/lstuartfry/h2-stations-map"
+              target="_blank"
+            >
+              README
+            </TextLink>{" "}
+            for more information!
+          </p>
+        </div>
       </Section>
 
       {/* About Me */}
@@ -97,16 +162,19 @@ export default function Home() {
           <div className="mt-6">
             In 2008, I received a Bachelor of Arts in Screenwriting from the
             Loyola Marymount School of Film and Television. I worked in the
-            entertainment industry for several years, before discovering my true
-            passion for software development. In 2014, I enrolled in a coding
-            bootcamp and quickly fell in love with programming.
+            entertainment industry for several years before discovering my true
+            passion for Software Development. Building software encapsulated
+            everything I loved about Screenwriting - the endless possibilities
+            to create anything you could dream up with your imagination.
           </div>
           <div>
-            Throughout my career, I have worked on a wide range of teams, from
-            small startups to larger corporations. I particularly enjoy working
-            with product managers and product designers to collaborate on the
-            roadmap for our products, communicating with our users to understand
-            their needs, and executing features with my fellow engineers.
+            In 2014, I enrolled in a coding bootcamp and soon after landed my
+            first job at a small startup in Los Angeles. Since then, my
+            strongest professional experiences have come from working with small
+            to mid-stage startups. I thoroughly enjoy working in fast-pace,
+            hyper-growth environments, as it challenges me to successfully scale
+            and mature not only our software development processes, but our
+            overall team culture.
           </div>
         </div>
       </Section>
