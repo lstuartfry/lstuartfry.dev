@@ -1,5 +1,7 @@
 import { Header, Subheader } from "@/components/ui/headers";
 import Section from "@/components/ui/section";
+import SkillsChart from "@/components/skillsChart/skillsChart";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -25,17 +27,20 @@ export default function Home() {
         <div></div>
       </div>
 
+      {/* Skills */}
+      <Section>
+        <Subheader className="font-semibold underline">Top Skills</Subheader>
+        <div className="mt-4">
+          <Suspense>
+            <SkillsChart />
+          </Suspense>
+        </div>
+      </Section>
+
       {/* About Me */}
       <Section>
         <Subheader className="font-semibold underline">About Me</Subheader>
         <div className="flex flex-col gap-6 text-lg leading-7">
-          {/* <div className="mt-6">
-            I&apos;m a Software Developer with 7+ years of experience. I have a
-            passion for building high-quality, user-friendly applications. I
-            have a strong background in frontend development, with expertise in
-            TypeScript, React, and Redux. I am always looking to learn new
-            technologies and improve my skills!
-          </div> */}
           <div className="mt-6">
             In 2008, I received a Bachelor of Arts in Screenwriting from the
             Loyola Marymount School of Film and Television. I worked in the
@@ -50,32 +55,6 @@ export default function Home() {
             roadmap for our products, communicating with our users to understand
             their needs, and executing features with my fellow engineers.
           </div>
-        </div>
-      </Section>
-
-      {/* Skills */}
-      <Section>
-        <Subheader className="font-semibold underline">Skills</Subheader>
-        <div className="mt-4 grid grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <div>
-              <span className="font-semibold">Languages: </span>
-              <span>TypeScript, JavaScript, HTML, CSS, Python</span>
-            </div>
-            <div>
-              <span className="font-semibold">Frontend/UI: </span>
-              <span>React, Redux, Next.js, WebGL, Storybook, Tailwind CSS</span>
-            </div>
-            <div>
-              <span className="font-semibold">Backend: </span>
-              <span>Node.js, Express</span>
-            </div>
-            <div>
-              <span className="font-semibold">Testing Libraries: </span>
-              <span>Playwright, Cypress, Jest, React Testing Library</span>
-            </div>
-          </div>
-          <div>carousal</div>
         </div>
       </Section>
     </main>
