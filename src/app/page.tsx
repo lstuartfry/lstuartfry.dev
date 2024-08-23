@@ -9,7 +9,7 @@ import Section from "@/components/ui/section";
 import SkillsChart from "@/components/skillsChart/skillsChart";
 import TextLink from "@/components/ui/textLink";
 import StorybookSVG from "public/storybook.svg";
-import ButtonLink from "@/components/ui/buttonLink";
+import SectionLinks from "@/components/sectionLinks/sectionLinks";
 
 export default function Home() {
   return (
@@ -35,21 +35,7 @@ export default function Home() {
           <Subheader className="flex justify-center">
             Check out these sections below
           </Subheader>
-          <div className="relative mt-10 flex justify-around">
-            <div className="absolute top-5 z-0 h-1 w-3/4 bg-blue-600" />
-            <ButtonLink className="z-10" href="#skills">
-              top skills
-            </ButtonLink>
-            <ButtonLink className="z-10" href="#projects">
-              projects
-            </ButtonLink>
-            <ButtonLink className="z-10" href="#libraries">
-              libraries
-            </ButtonLink>
-            <ButtonLink className="z-10" href="#aboutMe">
-              about me
-            </ButtonLink>
-          </div>
+          <SectionLinks />
         </Card>
       </div>
 
