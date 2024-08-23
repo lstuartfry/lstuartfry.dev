@@ -1,4 +1,7 @@
 "use client";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import JavaScriptSVG from "public/js.svg";
 import NextJSSVG from "public/nextjs.svg";
@@ -6,8 +9,6 @@ import ReactSVG from "public/react.svg";
 import ReduxSVG from "public/redux.svg";
 import TypeScriptSVG from "public/typescript.svg";
 import WebGLSVG from "public/webgl.svg";
-
-import dynamic from "next/dynamic";
 
 // reference: https://stackoverflow.com/questions/72311188/hydration-failed-error-using-recharts-with-nextjs
 const BarChart = dynamic(
@@ -87,28 +88,44 @@ const renderCustomizedLabel = (props: any) => {
 };
 
 export default function SkillsChart() {
+  const { ref, inView } = useInView();
+  const [shouldAnimate, setShouldAnimate] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (inView) {
+      setShouldAnimate(true);
+    }
+  }, [inView]);
+
   return (
-    <BarChart
-      id="skillsChart"
-      data={data}
-      width={800}
-      height={500}
-      margin={{ bottom: 24 }}
-      layout="vertical"
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis type="number" dataKey="years">
-        <Label
-          value="years of experience"
-          position="insideBottom"
-          offset={-10}
-        />
-      </XAxis>
-      <YAxis dataKey="name" type="category" width={150} />
-      <Tooltip />
-      <Bar dataKey="years" animationDuration={1500} animationEasing="ease-out">
-        <LabelList dataKey="name" content={renderCustomizedLabel} />
-      </Bar>
-    </BarChart>
+    <div ref={ref}>
+      <BarChart
+        id="skillsChart"
+        data={data}
+        width={800}
+        height={500}
+        margin={{ bottom: 24 }}
+        layout="vertical"
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis type="number" dataKey="years">
+          <Label
+            value="years of experience"
+            position="insideBottom"
+            offset={-10}
+          />
+        </XAxis>
+        <YAxis dataKey="name" type="category" width={150} />
+        <Tooltip />
+        <Bar
+          dataKey="years"
+          animationDuration={1500}
+          animationEasing="ease-out"
+          isAnimationActive={shouldAnimate}
+        >
+          <LabelList dataKey="name" content={renderCustomizedLabel} />
+        </Bar>
+      </BarChart>
+    </div>
   );
 }

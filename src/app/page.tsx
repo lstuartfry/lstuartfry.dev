@@ -26,10 +26,9 @@ export default function Home() {
             <span className="font-semibold text-blue-600">TypeScript</span> and{" "}
             <span className="font-semibold text-sky-700">React</span>.
           </div>
-          <div className="mt-3 text-xl leading-8">
-            I also have a lifelong passion for learning new technologies,
-            stretching my creativity and solving complex problems through
-            software.
+          <div className=" text-xl leading-8">
+            I have a lifelong passion for learning new technologies, stretching
+            my creativity and solving complex problems through software.
           </div>
         </div>
         <Card className="mt-16">
@@ -39,9 +38,7 @@ export default function Home() {
           <div className="mt-6 flex justify-around">
             <ButtonLink href="#skills">top skills</ButtonLink>
             <ButtonLink href="#projects">projects</ButtonLink>
-            <ButtonLink href="#additionalSkills">
-              additional skills / libraries
-            </ButtonLink>
+            <ButtonLink href="#libraries">libraries</ButtonLink>
             <ButtonLink href="#aboutMe">about me</ButtonLink>
           </div>
         </Card>
@@ -108,11 +105,11 @@ export default function Home() {
         </Section>
       </Card>
 
-      {/* Additional Skills */}
-      <Card id="additionalSkills">
+      {/* Libraries */}
+      <Card id="libraries">
         <Section>
           <Subheader className="font-semibold underline">
-            Additional Skills & Favorite Libraries
+            Favorite Libraries
           </Subheader>
           <div className="mt-4 grid grid-cols-2 items-center gap-y-4">
             <div className="flex flex-col">

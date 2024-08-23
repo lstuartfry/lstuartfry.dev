@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} min-h-screen bg-gray-100 pb-24 antialiased`}
+        className={`
+          ${openSans.className} min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 pb-24 antialiased
+          `}
       >
         <Navbar />
         <ClientListeners />
