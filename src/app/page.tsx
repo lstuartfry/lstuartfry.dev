@@ -13,7 +13,7 @@ import ButtonLink from "@/components/ui/buttonLink";
 
 export default function Home() {
   return (
-    <main className="xs:p-6 m-auto mt-40 flex max-w-4xl flex-col justify-between gap-12">
+    <main className="m-auto mt-40 flex max-w-4xl flex-col justify-between gap-12 p-4">
       <div className="min-h-screen">
         <Header>
           Hi, I&apos;m{" "}
@@ -35,11 +35,20 @@ export default function Home() {
           <Subheader className="flex justify-center">
             Check out these sections below
           </Subheader>
-          <div className="mt-6 flex justify-around">
-            <ButtonLink href="#skills">top skills</ButtonLink>
-            <ButtonLink href="#projects">projects</ButtonLink>
-            <ButtonLink href="#libraries">libraries</ButtonLink>
-            <ButtonLink href="#aboutMe">about me</ButtonLink>
+          <div className="relative mt-10 flex justify-around">
+            <div className="absolute top-5 z-0 h-1 w-3/4 bg-blue-600" />
+            <ButtonLink className="z-10" href="#skills">
+              top skills
+            </ButtonLink>
+            <ButtonLink className="z-10" href="#projects">
+              projects
+            </ButtonLink>
+            <ButtonLink className="z-10" href="#libraries">
+              libraries
+            </ButtonLink>
+            <ButtonLink className="z-10" href="#aboutMe">
+              about me
+            </ButtonLink>
           </div>
         </Card>
       </div>
