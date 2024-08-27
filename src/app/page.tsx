@@ -72,6 +72,17 @@ export default function Home() {
               </TextLink>
             </span>
           </p>
+          <div className="mt-8 flex justify-center">
+            <iframe
+              width="750"
+              height="450"
+              src="https://www.youtube.com/embed/9eDBroc_bNs?si=JLht7GELaD1n610l"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
           <div className="mt-8">
             <p>
               I currently live in Los Angeles, and have a lease on a hydrogen
