@@ -10,10 +10,11 @@ import SkillsChart from "@/components/skillsChart/skillsChart";
 import TextLink from "@/components/ui/textLink";
 import StorybookSVG from "public/storybook.svg";
 import SectionLinks from "@/components/sectionLinks/sectionLinks";
+import ButtonLink from "@/components/ui/buttonLink";
 
 export default function Home() {
   return (
-    <main className="m-auto mt-40 flex max-w-4xl flex-col justify-between gap-12 p-4">
+    <main className="m-auto mt-12 flex max-w-4xl flex-col justify-between gap-12 p-4 lg:mt-40">
       <div className="min-h-screen">
         <Header>
           Hi, I&apos;m{" "}
@@ -35,7 +36,13 @@ export default function Home() {
           <Subheader className="flex justify-center">
             Check out these sections below
           </Subheader>
-          <SectionLinks />
+          {/* <SectionLinks /> */}
+          <div className="mt-10 flex flex-col justify-between gap-3 md:flex-row">
+            <ButtonLink href="#skills">top skills</ButtonLink>
+            <ButtonLink href="#projects">projects</ButtonLink>
+            <ButtonLink href="#libraries">libraries</ButtonLink>
+            <ButtonLink href="#aboutMe">about me</ButtonLink>
+          </div>
         </Card>
       </div>
 
