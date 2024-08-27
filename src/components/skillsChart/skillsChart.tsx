@@ -24,6 +24,7 @@ import {
   CartesianGrid,
   Tooltip,
   Label,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -99,33 +100,33 @@ export default function SkillsChart() {
 
   return (
     <div ref={ref}>
-      <BarChart
-        id="skillsChart"
-        data={data}
-        width={800}
-        height={500}
-        margin={{ bottom: 24 }}
-        layout="vertical"
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis type="number" dataKey="years">
-          <Label
-            value="years of experience"
-            position="insideBottom"
-            offset={-10}
-          />
-        </XAxis>
-        <YAxis dataKey="name" type="category" width={150} />
-        <Tooltip />
-        <Bar
-          dataKey="years"
-          animationDuration={1500}
-          animationEasing="ease-out"
-          isAnimationActive={shouldAnimate}
+      <ResponsiveContainer width="100%" height={500}>
+        <BarChart
+          id="skillsChart"
+          data={data}
+          margin={{ bottom: 24, right: 20 }}
+          layout="vertical"
         >
-          <LabelList dataKey="name" content={renderCustomizedLabel} />
-        </Bar>
-      </BarChart>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis type="number" dataKey="years">
+            <Label
+              value="years of experience"
+              position="insideBottom"
+              offset={-10}
+            />
+          </XAxis>
+          <YAxis dataKey="name" type="category" width={150} />
+          <Tooltip />
+          <Bar
+            dataKey="years"
+            animationDuration={1500}
+            animationEasing="ease-out"
+            isAnimationActive={shouldAnimate}
+          >
+            <LabelList dataKey="name" content={renderCustomizedLabel} />
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }
