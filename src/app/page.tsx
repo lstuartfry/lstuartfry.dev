@@ -3,13 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Header, Subheader } from "@/components/ui/headers";
-
 import Card from "@/components/ui/card";
 import Section from "@/components/ui/section";
 import SkillsChart from "@/components/skillsChart/skillsChart";
 import TextLink from "@/components/ui/textLink";
 import StorybookSVG from "public/storybook.svg";
-import SectionLinks from "@/components/sectionLinks/sectionLinks";
 import ButtonLink from "@/components/ui/buttonLink";
 
 export default function Home() {
