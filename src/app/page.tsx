@@ -43,7 +43,6 @@ export default function Home() {
           </div>
         </Card>
       </div>
-
       {/* Skills */}
       <Card id="skills">
         <Section>
@@ -55,11 +54,12 @@ export default function Home() {
           </div>
         </Section>
       </Card>
-
       {/* Projects */}
       <Card id="projects">
         <Section>
-          <Subheader className="font-semibold underline">Projects</Subheader>
+          <Subheader className="font-semibold underline">
+            Current Projects
+          </Subheader>
           <p>
             <TextLink
               className="text-lg"
@@ -109,6 +109,95 @@ export default function Home() {
                 target="_blank"
               >
                 README
+              </TextLink>{" "}
+              for more information!
+            </p>
+          </div>
+        </Section>
+      </Card>
+
+      {/* Past Projects */}
+      <Card>
+        <Section>
+          <Subheader className="font-semibold underline">
+            Past Projects
+          </Subheader>
+          <p>
+            <TextLink
+              className="text-lg"
+              href="https://moveparallel.com"
+              target="_blank"
+            >
+              Parallel Systems - Fleet App
+            </TextLink>
+          </p>
+          <p>
+            <Image
+              className=""
+              src="/fleet_screenshot.png"
+              alt="fleet application screenshot"
+              width={800}
+              height={500}
+            />
+          </p>
+          <div className="mt-8">
+            <p>
+              <strong>&quot;The Future of Freight is Rail&quot;</strong> -
+              Parallel Systems is on a mission to disrupt the Freight industry
+              and move freight transportation off of trucks and onto our
+              world&apos;s railroad systems. They are building their own
+              battery-powered vehicles, and they are also building their own
+              software platform that seamlessly integrates with existing train
+              control systems. This is the user interface that I primarily
+              worked on during my tenure at Parallel.
+            </p>
+            <p>
+              Given the fact these vehicles are driver-less, and remote
+              operators can theoretically be tens of miles away from the vehicle
+              itself, the paramount goal and strongest challenge in building
+              this interface was <strong>safety.</strong>As a frontend developer
+              and consumer of realtime data associated with the rail network and
+              vehicle telemetry, I was a key contributor in translating these
+              data points into a robust yet user-friendly interface that
+              seamlessly integrated into existing rail business systems.
+            </p>
+            <p>
+              Among my favorite direct contributions to this application are the
+              &quot;Route Intervention&quot; cards (pictured above) that are
+              rendered in the UI once a user has issued a movement command to a
+              vehicle. These cards are designed to inform the operator when they
+              will have to perform some type of action in order to allow the
+              vehicle to proceed along it&apos;s route.
+            </p>
+            <p>
+              The sequence of these interventions and the variable distance
+              between the vehicle and the point of intervention is especially
+              important. Using railroad GeoJSON and a combination of geospatial
+              calculation helpers from the{" "}
+              <TextLink href="https://turfjs.org/" target="_blank">
+                turf.js library
+              </TextLink>
+              , I was able to accurately calculate distances along the track
+              between intervention points and the vehicle, ensuring operators
+              were given precise instructions in realtime throughout a
+              vehicle&apos;s planned route.
+            </p>
+            <p>
+              <Image
+                className=""
+                src="/turfjs.png"
+                alt="turf.js screenshot"
+                width={800}
+                height={500}
+              />
+            </p>
+            <p>
+              Check out the official{" "}
+              <TextLink
+                href="https://moveparallel.com/product/"
+                target="_blank"
+              >
+                Product Page
               </TextLink>{" "}
               for more information!
             </p>
@@ -171,8 +260,8 @@ export default function Home() {
                 An opinionated, declarative query builder and server state
                 manager for React applications. I used to spend too much time
                 building out custom hooks for fetching data in my projects. It
-                handles caching, background updates and stale data out of the
-                box with zero-configuration.
+                handles response caching, background updates and stale data out
+                of the box with zero-configuration.
               </span>
             </div>
             <div className="flex justify-center">
@@ -188,7 +277,6 @@ export default function Home() {
           </div>
         </Section>
       </Card>
-
       {/* About Me */}
       <Card id="aboutMe">
         <Section>
@@ -208,9 +296,9 @@ export default function Home() {
               first job at a small startup in Los Angeles. Since then, my
               strongest professional experiences have come from working with
               small to mid-stage startups. I thoroughly enjoy working in
-              fast-pace, hyper-growth environments, as it challenges me to
-              successfully scale and mature not only our software development
-              processes, but our overall team culture.
+              fast-paced, hyper-growth environments, as it challenges me to
+              successfully scale and mature not only the company&apos;s software
+              development processes, but the overall team culture.
             </div>
           </div>
         </Section>
