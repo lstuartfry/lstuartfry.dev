@@ -142,9 +142,8 @@ export default function Home() {
               >
                 turf.js&apos;s Sector API.
               </TextLink>{" "}
-              Here is an example directly from their documentation:
             </p>
-            <p>
+            {/* <p>
               <Image
                 className=""
                 src="/turfjs_sector.png"
@@ -152,7 +151,7 @@ export default function Home() {
                 width={800}
                 height={500}
               />
-            </p>
+            </p> */}
             <p>
               Check out the{" "}
               <TextLink
@@ -233,7 +232,7 @@ export default function Home() {
               were given precise instructions in realtime throughout a
               vehicle&apos;s planned route.
             </p>
-            <p>
+            {/* <p>
               <Image
                 className=""
                 src="/turfjs.png"
@@ -241,7 +240,7 @@ export default function Home() {
                 width={800}
                 height={500}
               />
-            </p>
+            </p> */}
             <p>
               Check out the official{" "}
               <TextLink
