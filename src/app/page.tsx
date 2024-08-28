@@ -147,7 +147,7 @@ export default function Home() {
             <p>
               <Image
                 className=""
-                src="/turfjs sector.png"
+                src="/turfjs_sector.png"
                 alt="turf js sector example"
                 width={800}
                 height={500}
