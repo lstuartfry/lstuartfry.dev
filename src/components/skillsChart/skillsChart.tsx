@@ -50,7 +50,7 @@ const data = [
   },
   {
     name: "Next.js",
-    years: 1,
+    years: 2,
     fill: "#000000",
   },
   {
