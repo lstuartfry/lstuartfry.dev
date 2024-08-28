@@ -34,7 +34,6 @@ export default function Home() {
           <Subheader className="flex justify-center">
             Check out these sections below
           </Subheader>
-          {/* <SectionLinks /> */}
           <div className="mt-10 flex flex-col justify-between gap-3 md:flex-row">
             <ButtonLink href="#skills">top skills</ButtonLink>
             <ButtonLink href="#projects">projects</ButtonLink>
@@ -43,6 +42,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
+
       {/* Skills */}
       <Card id="skills">
         <Section>
@@ -94,13 +94,64 @@ export default function Home() {
               fuel-cell vehicle. The infrastructure for hydrogen fueling
               stations is still quite lacking, and even amongst the stations
               that exist in the Los Angeles area, they are often either out of
-              fuel, or offline altogether. A similar web application does
-              currently exist{" "}
-              <TextLink href="https://h2fcp.org/stationmap" target="_blank">
-                (Hydrogen Stations Map)
+              fuel, or offline altogether. This application is designed to give
+              a user a quick glimpse into stations near their location, or any
+              address they would like to enter.
+            </p>
+            <p>
+              This application uses data fetched from the{" "}
+              <TextLink href="https://www.nrel.gov/" target="_blank">
+                National Renewable Energy Laboratory
+              </TextLink>{" "}
+              for all public hydrogen gas stations in California, along with the
+              browser&apos;s native{" "}
+              <TextLink
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
+                target="_blank"
+              >
+                Geolocation API
               </TextLink>
-              , but as a frequent user of it, there are improvements I&apos;d
-              like to make on it. I built this application using Next.js.
+              to render stations on a map that are within close proximity to the
+              user&apos;s location.
+            </p>
+            <p>
+              For the base layer of the map, I use{" "}
+              <TextLink
+                href="https://docs.mapbox.com/mapbox-gl-js/guides"
+                target="_blank"
+              >
+                mapbox-gl-js
+              </TextLink>
+              . I also utilize mapbox&apos;s{" "}
+              <TextLink
+                href="https://docs.mapbox.com/api/search/geocoding/"
+                target="_blank"
+              >
+                Geocoding API
+              </TextLink>{" "}
+              for users that prefer to enter an address directly, rather than
+              enable location services.
+            </p>
+            <p>
+              Once the map has loaded, I render a polygon sector representing a
+              radius of the desired proximity of fuel stations to the
+              user&apos;s location. This is done using{" "}
+              <TextLink
+                href="https://turfjs.org/docs/api/sector"
+                target="_blank"
+              >
+                turf.js&apos;s Sector API.
+              </TextLink>{" "}
+              Here is an example directly from their documentation:
+            </p>
+            <p>
+              <Image
+                className=""
+                src="/turfjs sector.png"
+                alt="turf js sector example"
+                width={800}
+                height={500}
+              />
             </p>
             <p>
               Check out the{" "}
