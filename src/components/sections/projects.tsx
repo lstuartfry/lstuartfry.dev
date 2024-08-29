@@ -95,7 +95,7 @@ export default function Projects() {
               width="750"
               height="450"
               src="https://www.youtube.com/embed/9eDBroc_bNs?si=JLht7GELaD1n610l"
-              title="YouTube video player"
+              title="Hydrogen Stations Map video demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen

@@ -70,15 +70,18 @@ export default function Experience() {
             given precise instructions in realtime throughout a vehicle&apos;s
             planned route.
           </p>
-          {/* <p>
-          <Image
-            className=""
-            src="/turfjs.png"
-            alt="turf.js screenshot"
-            width={800}
-            height={500}
-          />
-        </p> */}
+          <p>Here is a quick demo of the feature in a simulated environment:</p>
+          <div className="mt-8 flex justify-center">
+            <iframe
+              width="750"
+              height="450"
+              src="https://www.youtube.com/embed/B-zvsvqVNP4?si=r_8zm9gDYwvPJGOD"
+              title="Fleet UI Route Interventions video demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p>
             Check out the official{" "}
             <TextLink href="https://moveparallel.com/product/" target="_blank">
