@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Card from "../ui/card";
 import Section from "../ui/section";
 import { Subheader } from "../ui/headers";
@@ -27,17 +29,15 @@ export default function Projects() {
             </TextLink>
           </span>
         </p>
-        <div className="mt-8 flex justify-center">
-          <iframe
-            width="750"
-            height="450"
-            src="https://www.youtube.com/embed/9eDBroc_bNs?si=JLht7GELaD1n610l"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <p>
+          <Image
+            className=""
+            src="/h2-stations-map-screenshot.png"
+            alt="hydrogen stations map screenshot"
+            width={800}
+            height={500}
+          />
+        </p>
         <div className="mt-8">
           <p>
             I currently live in Los Angeles, and have a lease on a hydrogen
@@ -90,15 +90,17 @@ export default function Projects() {
               turf.js&apos;s Sector API.
             </TextLink>{" "}
           </p>
-          {/* <p>
-          <Image
-            className=""
-            src="/turfjs_sector.png"
-            alt="turf js sector example"
-            width={800}
-            height={500}
-          />
-        </p> */}
+          <div className="mt-8 flex justify-center">
+            <iframe
+              width="750"
+              height="450"
+              src="https://www.youtube.com/embed/9eDBroc_bNs?si=JLht7GELaD1n610l"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p>
             Check out the{" "}
             <TextLink
