@@ -7,9 +7,11 @@ import TextLink from "../ui/textLink";
 
 export default function Experience() {
   return (
-    <Card>
+    <Card id="experience">
       <Section>
-        <Subheader className="font-semibold underline">Past Projects</Subheader>
+        <Subheader className="font-semibold underline">
+          Professional Experience
+        </Subheader>
         <p>
           <TextLink
             className="text-lg"
@@ -28,7 +30,7 @@ export default function Experience() {
             height={500}
           />
         </p>
-        <div className="mt-8">
+        <div className="mt-4">
           <p>
             <strong>&quot;The Future of Freight is Rail&quot;</strong> -
             Parallel Systems is on a mission to disrupt the Freight industry and
@@ -71,7 +73,7 @@ export default function Experience() {
             planned route.
           </p>
           <p>Here is a quick demo of the feature in a simulated environment:</p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <iframe
               width="750"
               height="450"

@@ -10,8 +10,8 @@ export default function Home() {
     <main className="m-auto mt-12 flex max-w-4xl flex-col justify-between gap-12 p-4 lg:mt-40">
       <Intro />
       <Skills />
-      <Projects />
       <Experience />
+      <Projects />
       <Libraries />
       <AboutMe />
     </main>

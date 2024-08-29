@@ -38,7 +38,7 @@ export default function Projects() {
             height={500}
           />
         </p>
-        <div className="mt-8">
+        <div className="mt-4">
           <p>
             I currently live in Los Angeles, and have a lease on a hydrogen
             fuel-cell vehicle. The infrastructure for hydrogen fueling stations
@@ -90,7 +90,7 @@ export default function Projects() {
               turf.js&apos;s Sector API.
             </TextLink>{" "}
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <iframe
               width="750"
               height="450"
