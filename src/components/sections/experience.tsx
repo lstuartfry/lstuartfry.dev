@@ -84,13 +84,13 @@ export default function Experience() {
               allowFullScreen
             ></iframe>
           </div>
-          <p>
+          <div className="mt-12">
             Check out the official{" "}
             <TextLink href="https://moveparallel.com/product/" target="_blank">
               Product Page
             </TextLink>{" "}
             for more information!
-          </p>
+          </div>
         </div>
       </Section>
     </Card>

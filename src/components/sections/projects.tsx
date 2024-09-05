@@ -101,7 +101,7 @@ export default function Projects() {
               allowFullScreen
             ></iframe>
           </div>
-          <p>
+          <div className="mt-12">
             Check out the{" "}
             <TextLink
               href="https://github.com/lstuartfry/h2-stations-map"
@@ -110,7 +110,7 @@ export default function Projects() {
               README
             </TextLink>{" "}
             for more information!
-          </p>
+          </div>
         </div>
       </Section>
     </Card>
