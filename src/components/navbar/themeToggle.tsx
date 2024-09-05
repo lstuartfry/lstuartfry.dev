@@ -17,13 +17,13 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="transition hover:scale-110 active:scale-90"
+      className="rounded border border-gray-200 p-2 shadow hover:bg-gray-100 dark:border-slate-600 dark:bg-black dark:hover:bg-slate-800"
       onClick={onClick}
     >
       {enabled ? (
-        <SunSVG width={32} height={32} />
+        <SunSVG width={24} height={24} />
       ) : (
-        <MoonSVG width={32} height={32} />
+        <MoonSVG width={24} height={24} />
       )}
     </button>
   );
