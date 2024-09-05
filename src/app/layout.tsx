@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
-          ${openSans.className} min-h-screen bg-gradient-to-br from-slate-50 to-slate-300 pb-24 antialiased
+          ${openSans.className} min-h-screen bg-gradient-to-br from-slate-50 to-slate-300 pb-24 antialiased transition-all duration-500 dark:from-slate-800 dark:to-slate-900 dark:text-slate-100
           `}
       >
         <Navbar />
