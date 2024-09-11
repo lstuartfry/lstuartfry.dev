@@ -80,7 +80,13 @@ export default function Projects() {
               Geocoding API
             </TextLink>{" "}
             for users that prefer to enter an address directly, rather than
-            enable location services.
+            enable location services. This feature is optimized using their new{" "}
+            <TextLink
+              href="https://www.mapbox.com/address-autofill"
+              target="_blank"
+            >
+              Address Autofill API.
+            </TextLink>
           </p>
           <p>
             Once the map has loaded, I render a polygon sector representing a
@@ -92,9 +98,9 @@ export default function Projects() {
           </p>
           <div className="mt-4 flex justify-center">
             <iframe
-              width="750"
-              height="450"
-              src="https://www.youtube.com/embed/9eDBroc_bNs?si=JLht7GELaD1n610l"
+              width="700"
+              height="394"
+              src="https://www.youtube.com/embed/TbUju2Y3nyo?si=C2bBsqI4PTtWh-Hm"
               title="Hydrogen Stations Map video demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
