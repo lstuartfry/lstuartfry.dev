@@ -7,7 +7,7 @@ export default function Intro() {
     <div className="min-h-screen">
       <Header>
         Hi, I&apos;m{" "}
-        <span className="font-semibold text-purple-500">Lukas</span>
+        <span className="font-semibold text-purple-500">Lukas</span>.
       </Header>
       <div className="mt-12">
         <Subheader>I&apos;m a Product-minded Software Developer.</Subheader>
