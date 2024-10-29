@@ -60,7 +60,7 @@ export default function Projects() {
               target="_blank"
             >
               Geolocation API
-            </TextLink>
+            </TextLink>{" "}
             to render stations on a map that are within close proximity to the
             user&apos;s location.
           </p>
