@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 import JavaScriptSVG from "public/js.svg";
 import NextJSSVG from "public/nextjs.svg";
+import NodeJSSVG from "public/nodejs.svg";
 import ReactSVG from "public/react.svg";
 import ReduxSVG from "public/redux.svg";
 import TypeScriptSVG from "public/typescript.svg";
@@ -44,6 +45,11 @@ const data = [
     fill: "#ffc107",
   },
   {
+    name: "NodeJS",
+    years: 7,
+    fill: "#6abf47",
+  },
+  {
     name: "Redux",
     years: 7,
     fill: "#764abc",
@@ -77,6 +83,8 @@ const renderCustomizedLabel = (props: any) => {
       return <JavaScriptSVG {...defaultProps} />;
     case "Next.js":
       return <NextJSSVG {...defaultProps} />;
+    case "NodeJS":
+      return <NodeJSSVG {...defaultProps} />;
     case "React":
       return <ReactSVG {...defaultProps} />;
     case "Redux":
