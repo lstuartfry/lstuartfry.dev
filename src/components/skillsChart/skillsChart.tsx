@@ -28,41 +28,66 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const data = [
+type Hex = `#${string}`;
+
+type Skill =
+  | "TypeScript"
+  | "React"
+  | "JavaScript"
+  | "NodeJS"
+  | "Redux"
+  | "Next.js"
+  | "WebGL";
+
+type Data = {
+  name: Skill;
+  years: number;
+  fill: Hex;
+  logo: React.FC<React.SVGProps<SVGElement>>;
+};
+
+const data: Data[] = [
   {
     name: "TypeScript",
     years: 4,
     fill: "#0078CF",
+    logo: TypeScriptSVG,
   },
   {
     name: "React",
     years: 7,
     fill: "#5ADAFD",
+    logo: ReactSVG,
   },
   {
     name: "JavaScript",
     years: 7,
     fill: "#ffc107",
+    logo: JavaScriptSVG,
   },
   {
     name: "NodeJS",
     years: 7,
     fill: "#6abf47",
+    logo: NodeJSSVG,
   },
   {
     name: "Redux",
     years: 7,
     fill: "#764abc",
+    logo: ReduxSVG,
   },
   {
     name: "Next.js",
     years: 2,
     fill: "#000000",
+    logo: NextJSSVG,
   },
   {
     name: "WebGL",
     years: 2,
     fill: "#900",
+    logo: WebGLSVG,
   },
 ];
 
@@ -71,29 +96,16 @@ const renderCustomizedLabel = (props: any) => {
   const radius = 32;
 
   const defaultProps = {
-    width: 24,
+    width: 48,
     height: 24,
     x: x + width + 10,
     y: y + radius / 2,
     radius: radius,
   };
 
-  switch (value) {
-    case "JavaScript":
-      return <JavaScriptSVG {...defaultProps} />;
-    case "Next.js":
-      return <NextJSSVG {...defaultProps} />;
-    case "NodeJS":
-      return <NodeJSSVG {...defaultProps} />;
-    case "React":
-      return <ReactSVG {...defaultProps} />;
-    case "Redux":
-      return <ReduxSVG {...defaultProps} />;
-    case "TypeScript":
-      return <TypeScriptSVG {...defaultProps} />;
-    case "WebGL":
-      return <WebGLSVG {...defaultProps} width={48} />;
-  }
+  const skill = data.find((item) => item.name === value);
+
+  return skill && <skill.logo {...defaultProps} />;
 };
 
 export default function SkillsChart() {
@@ -112,7 +124,7 @@ export default function SkillsChart() {
         <BarChart
           id="skillsChart"
           data={data}
-          margin={{ bottom: 24, right: 20 }}
+          margin={{ bottom: 24, right: 48 }}
           layout="vertical"
         >
           <CartesianGrid strokeDasharray="3 3" />
