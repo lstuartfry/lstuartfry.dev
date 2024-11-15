@@ -26,7 +26,7 @@ export default function Intro() {
           Check out these sections below
         </Subheader>
         <div className="mt-10 flex flex-col justify-between gap-3 md:flex-row">
-          <ButtonLink href="#skills">top skills</ButtonLink>
+          <ButtonLink href="#skills">skills</ButtonLink>
           <ButtonLink href="#experience">experience</ButtonLink>
           <ButtonLink href="#projects">projects</ButtonLink>
           <ButtonLink href="#libraries">libraries</ButtonLink>

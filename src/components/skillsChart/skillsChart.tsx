@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
+import CSSSVG from "public/css.svg";
+import HTMLSVG from "public/html5.svg";
 import JavaScriptSVG from "public/js.svg";
 import NextJSSVG from "public/nextjs.svg";
 import NodeJSSVG from "public/nodejs.svg";
@@ -31,12 +33,14 @@ import {
 type Hex = `#${string}`;
 
 type Skill =
-  | "TypeScript"
-  | "React"
+  | "CSS"
+  | "HTML"
   | "JavaScript"
-  | "NodeJS"
-  | "Redux"
   | "Next.js"
+  | "NodeJS"
+  | "React"
+  | "Redux"
+  | "TypeScript"
   | "WebGL";
 
 type Data = {
@@ -50,20 +54,32 @@ const data: Data[] = [
   {
     name: "TypeScript",
     years: 4,
-    fill: "#0078CF",
+    fill: "#0078cf",
     logo: TypeScriptSVG,
-  },
-  {
-    name: "React",
-    years: 7,
-    fill: "#5ADAFD",
-    logo: ReactSVG,
   },
   {
     name: "JavaScript",
     years: 7,
     fill: "#ffc107",
     logo: JavaScriptSVG,
+  },
+  {
+    name: "HTML",
+    years: 7,
+    fill: "#e86228",
+    logo: HTMLSVG,
+  },
+  {
+    name: "CSS",
+    years: 7,
+    fill: "#1b84c1",
+    logo: CSSSVG,
+  },
+  {
+    name: "React",
+    years: 7,
+    fill: "#5adafd",
+    logo: ReactSVG,
   },
   {
     name: "NodeJS",
@@ -93,7 +109,7 @@ const data: Data[] = [
 
 const renderCustomizedLabel = (props: any) => {
   const { x, y, width, value } = props;
-  const radius = 32;
+  const radius = 16;
 
   const defaultProps = {
     width: 48,
