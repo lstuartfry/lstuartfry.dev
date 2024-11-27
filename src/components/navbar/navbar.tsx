@@ -14,7 +14,7 @@ export default function Navbar() {
           <Link
             className="flex items-center gap-2"
             href="/"
-            aria-describedby="home link"
+            aria-label="home link"
           >
             <HomeSVG width={32} height={32} className="text-purple-500" />
             <span>Lukas Stuart-Fry</span>
@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link
             href="https://github.com/lstuartfry/"
             target="_blank"
-            aria-describedby="github link"
+            aria-label="github link"
           >
             <GithubSVG
               className="dark:rounded-full dark:bg-white"
@@ -36,14 +36,14 @@ export default function Navbar() {
           <Link
             href="https://linkedin.com/in/lukasstuartfry"
             target="_blank"
-            aria-describedby="linkedin link"
+            aria-label="linkedin link"
           >
             <LinkedinSVG width={32} height={32} />
           </Link>
           <Link
             href="https://x.com/lstuartfry"
             target="_blank"
-            aria-describedby="twitter link"
+            aria-label="twitter link"
           >
             <TwitterSVG width={32} height={32} />
           </Link>

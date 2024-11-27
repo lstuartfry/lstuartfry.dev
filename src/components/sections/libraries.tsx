@@ -16,7 +16,11 @@ export default function Libraries() {
         </Subheader>
         <div className="mt-4 grid grid-cols-2 items-center gap-y-4">
           <div className="flex flex-col">
-            <TextLink href="https://playwright.dev/" target="_blank">
+            <TextLink
+              href="https://playwright.dev/"
+              target="_blank"
+              aria-label="playwright homepage"
+            >
               Playwright
             </TextLink>
             <span className="mt-2">
@@ -27,7 +31,11 @@ export default function Libraries() {
             </span>
           </div>
           <div className="flex justify-center">
-            <Link href="https://playwright.dev/" target="_blank">
+            <Link
+              href="https://playwright.dev/"
+              target="_blank"
+              aria-label="playwright homepage"
+            >
               <Image
                 src="https://playwright.dev/img/playwright-logo.svg"
                 alt="playwright logo"
@@ -37,7 +45,11 @@ export default function Libraries() {
             </Link>
           </div>
           <div className="flex flex-col">
-            <TextLink href="https://storybook.js.org/" target="_blank">
+            <TextLink
+              href="https://storybook.js.org/"
+              target="_blank"
+              aria-label="storybook homepage"
+            >
               Storybook
             </TextLink>
             <span className="mt-2">
@@ -48,12 +60,20 @@ export default function Libraries() {
             </span>
           </div>
           <div className="flex justify-center">
-            <Link href="https://storybook.js.org/" target="_blank">
+            <Link
+              href="https://storybook.js.org/"
+              target="_blank"
+              aria-label="storybook homepage"
+            >
               <StorybookSVG width={128} height={128} />
             </Link>
           </div>
           <div className="flex flex-col">
-            <TextLink href="https://tanstack.com/query/latest" target="_blank">
+            <TextLink
+              href="https://tanstack.com/query/latest"
+              target="_blank"
+              aria-label="tanstack homepage"
+            >
               TanStack Query
             </TextLink>
             <span className="mt-2">
@@ -65,7 +85,11 @@ export default function Libraries() {
             </span>
           </div>
           <div className="flex justify-center">
-            <Link href="https://tanstack.com/query/latest" target="_blank">
+            <Link
+              href="https://tanstack.com/query/latest"
+              target="_blank"
+              aria-label="tanstack homepage"
+            >
               <Image
                 src="/tanstack-query.png"
                 alt="tanstack query logo"
