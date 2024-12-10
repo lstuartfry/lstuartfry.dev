@@ -1,6 +1,7 @@
 import ButtonLink from "../ui/buttonLink";
 import Card from "../ui/card";
 import { Header, Subheader } from "../ui/headers";
+import DownArrowSVG from "public/down-arrow.svg";
 
 export default function Intro() {
   return (
@@ -33,6 +34,9 @@ export default function Intro() {
           <ButtonLink href="#aboutMe">about me</ButtonLink>
         </div>
       </Card>
+      <div className="mt-16 flex justify-center">
+        <DownArrowSVG className="fill-purple-500" height={120} />
+      </div>
     </div>
   );
 }
